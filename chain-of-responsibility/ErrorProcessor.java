@@ -1,11 +1,11 @@
 public class ErrorProcessor extends LogProcessor {
 
-  ErrorProcessor(LogProcessor nextLogProcessor) {
+  public ErrorProcessor(LogProcessor nextLogProcessor) {
     super(nextLogProcessor);
   }
 
-  public void log(int logLevel, String message) {
-    if (logLevel == ERROR) {
+  public void log(ErrorType logLevel, String message) {
+    if (logLevel == ErrorType.ERROR) {
       System.out.println("ERROR : " + message);
     } else {
       super.log(logLevel, message);

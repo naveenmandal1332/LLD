@@ -1,11 +1,11 @@
 public class InfoProcessor extends LogProcessor {
 
-  InfoProcessor(LogProcessor nextLogProcessor) {
+  public InfoProcessor(LogProcessor nextLogProcessor) {
     super(nextLogProcessor);
   }
 
-  public void log(int logLevel, String message) {
-    if (logLevel == INFO) {
+  public void log(ErrorType logLevel, String message) {
+    if (logLevel == ErrorType.INFO) {
       System.out.println("INFO : " + message);
     } else {
       super.log(logLevel, message);
