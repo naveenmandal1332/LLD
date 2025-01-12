@@ -25,7 +25,7 @@ public class BookingController {
       throw new IllegalStateException("User Not Found!");
 
     // Check Seat Availability:
-    Flight flight = flightController.searchFlight("", "", departDate, seats.size()).stream()
+    Flight flight = flightController.searchFlightFrom("", "", departDate, seats.size()).stream()
         .filter(f -> f.toString().contains(flightNumber))
         .findFirst()
         .orElse(null);

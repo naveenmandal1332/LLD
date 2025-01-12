@@ -28,7 +28,7 @@ public class FlightInventory {
     flightController.addFlight(f2);
 
     // Search Flight:
-    List<Flight> flights = flightController.searchFlight("", "BLR", 2, 1);
+    List<Flight> flights = flightController.searchFlightFrom("", "BLR", 2, 1);
     for (Flight f : flights) {
       System.out.println(f.toString());
     }
